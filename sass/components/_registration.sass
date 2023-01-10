@@ -1,0 +1,124 @@
+$btn-gradient: linear-gradient(180deg, #F25322 0%, rgba(242, 83, 34, 0.81) 48.96%, #F25322 100%)
+$btn-hover-gradient: linear-gradient(180deg, #D23E11 0%, rgba(155, 47, 14, 0.81) 48.96%, #CC390B 100%)
+$btn-border: linear-gradient(140.88deg, #F2DD22 0%, rgba(217, 217, 217, 0) 39.94%)
+
+.registration
+	max-width: 553px
+	position: absolute
+	left: 98px
+	top: 0
+	bottom: 0
+	margin: auto 0
+	height: min-content
+	z-index: 2
+	&_title
+		font-size: 40px
+		font-weight: 800
+		line-height: 47px
+		text-transform: uppercase
+	&_subtitle
+		max-width: 257px
+		margin-top: 20px
+		font-size: 16px
+		font-weight: 700
+		line-height: 27px
+		text-transform: uppercase
+		opacity: 0.5
+	&_button-wrapper
+		position: relative
+		width: fit-content
+		margin-top: 67px
+		clip-path: polygon(0 0, 115% 0%, 0% 500%)
+		padding: 1px 0 0 1px
+		background: $btn-border
+	&_button
+		padding: 15px 51px
+		background: $btn-gradient
+		&::after
+			content: ''
+			position: absolute
+			left: 0
+			right: 0
+			top: 0
+			bottom: 0
+			margin: 1px 0 0 1px
+			background: $btn-hover-gradient
+			z-index: 1
+			transition: opacity .4s
+			opacity: 0
+		&:hover::after
+			opacity: 1
+	&_button-text
+		position: relative
+		font-weight: 700
+		font-size: 18px
+		line-height: 31px
+		text-transform: uppercase
+		text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.51)
+		z-index: 2
+
+@media screen and ( max-width: 1600px )
+	.registration
+		max-width: 500px
+		bottom: 10%
+		&_title
+			font-size: 36px
+			line-height: 40px
+		&_subtitle
+			margin-top: 10px
+		&_button-wrapper
+			margin-top: 44px
+
+@media screen and ( max-width: 1441px )
+	.registration
+		max-width: 440px
+		left: 60px
+		&_title
+			font-size: 32px
+		&_subtitle
+			max-width: 230px
+			margin-top: 5px
+			font-size: 14px
+			line-height: 20px
+		&_button-wrapper
+			margin-top: 24px
+		&_button
+			padding: 10px 46px
+		&_button-text
+			font-size: 16px
+
+@media screen and ( max-width: 1025px )
+	.registration
+		max-width: 320px
+		left: 20px
+		&_title
+			font-size: 22px
+			line-height: 30px
+		&_subtitle
+			max-width: 190px
+			font-size: 12px
+			line-height: 16px
+		&_button-wrapper
+			margin-top: 20px
+
+@media screen and ( max-width: 769px )
+	.registration
+		position: unset
+		display: flex
+		order: 1
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		text-align: center
+		margin: 20px auto 0 auto
+		&_title
+			width: 270px
+			font-size: 18px
+			line-height: 21px
+		&_subtitle
+			font-size: 12px
+			line-height: 19px
+		&_button
+			padding: 11px 65px
+		&_button-text
+			font-size: 14px

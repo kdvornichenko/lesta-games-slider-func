@@ -1,0 +1,186 @@
+.nav
+	display: flex
+	justify-content: space-between
+	flex-grow: 1
+	&_wrapper
+		max-width: 95%
+		width: 1258px
+		margin: 60px auto 0
+		position: relative
+		display: flex
+		gap: 74px
+		align-items: center
+		justify-content: center
+		z-index: 2
+	&_item
+		position: relative
+		cursor: pointer
+		text-align: center
+		&__active,&:hover
+			.nav_icon
+				&::before
+					width: 124px
+					height: 96px
+			.nav_name
+				opacity: 0
+		&__active
+			cursor: default
+			.nav_icon
+				&::after
+					opacity: 1
+	&_icon
+		margin: 0 auto
+		width: 90px
+		height: 70px
+		background-size: contain
+		background-repeat: no-repeat
+		&__ussr,&__germany,&__usa,&__france,&__uk,&__czech
+			position: relative
+			&::before
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				background-size: contain
+				background-repeat: no-repeat
+				transition: .5s
+			&::after
+				content: ''
+				position: absolute
+				top: 15px
+				left: 25px
+				width: 60px
+				height: 60px
+				background: #F25322
+				filter: blur(40px)
+				opacity: 0
+				transition: .5s
+		&__ussr
+			&::before
+				background-image: url(../img/flags/ussr_small.png)
+		&__germany
+			&::before
+				background-image: url(../img/flags/germany_small.png)
+		&__usa
+			&::before
+				background-image: url(../img/flags/usa_small.png)
+		&__france
+			&::before
+				background-image: url(../img/flags/france_small.png)
+		&__uk
+			&::before
+				background-image: url(../img/flags/uk_small.png)
+		&__czech
+			&::before
+				background-image: url(../img/flags/czech_small.png)
+	&_name
+		position: absolute
+		right: -30px
+		left: -30px
+		display: inline-block
+		margin-top: 5px
+		font-weight: 700
+		font-size: 14px
+		line-height: 16px
+		text-align: center
+		text-transform: uppercase
+		opacity: 0.5
+		transition: .3s
+	&_arrow
+		display: flex
+		justify-content: center
+		align-items: center
+		cursor: pointer
+		width: 58px
+		height: 58px
+		background: #000
+		transition: all .2s
+		svg
+			path
+				transition: fill .2s
+		&:hover
+			background: #F25322
+			svg
+				path
+					fill: #000
+
+@media screen and ( max-width: 1601px )
+	.nav
+		&_wrapper
+			width: 1200px
+
+@media screen and ( max-width: 1441px )
+	.nav
+		&_wrapper
+			margin-top: 30px
+
+@media screen and ( max-width: 1241px )
+	.nav
+		&_item
+			&__active,&:hover
+				.nav_icon
+					&::before
+						width: 104px
+						height: 86px
+					&::after
+						top: 10px
+						width: 50px
+						height: 50px
+		&_icon
+			width: 80px
+			height: 60px
+		&_name
+			font-size: 12px
+			line-height: 14px
+
+@media screen and ( max-width: 1025px )
+	.nav
+		&_wrapper
+			gap: 20px
+		&_item
+			&__active,&:hover
+				.nav_icon
+					&::before
+						width: 94px
+						height: 76px
+					&::after
+						top: 5px
+						left: 20px
+		&_arrow
+			width: 35px
+			height: 35px
+
+@media screen and ( max-width: 769px )
+	.nav
+		width: 600px
+		margin: 0 auto
+		&_scroll-wrapper
+			order: 3
+			margin: -60px 0 -100px
+			overflow-x: scroll
+			scroll-behavior: smooth
+			-ms-overflow-style: none /* IE and Edge */
+			scrollbar-width: none /* Firefox */
+			&::-webkit-scrollbar
+				display: none
+		&_wrapper
+			display: block
+			padding: 100px 10px
+			margin-top: 0
+		&_item
+			&__active,&:hover
+				.nav_icon
+					&::before
+						width: 78px
+						height: 60px
+					&::after
+						width: 44px
+						height: 44px
+						left: 15px
+		&_icon
+			width: 65px
+			height: 50px
+		&_arrow
+			display: none
