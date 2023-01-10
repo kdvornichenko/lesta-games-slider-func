@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/x-icon" href="./img/icons/logo.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./css/main.css" />
+		<title>Lesta Games - Slider</title>
+	</head>
+	<body>
+		<section class="about-technic">
+			<!-- BACKGROUND -->
+			<div class="about-technic_bg"></div>
+			<!-- MAIN BLOCK -->
+			<div class="about-technic_wrapper">
+				<h2 class="about-technic_header">
+					Тяжёлые <br />
+					танки
+				</h2>
+				<!-- TECHNIC INFO -->
+				<div class="technic">
+					<div class="technic_flag-wrapper">
+						<div class="technic_flag"></div>
+					</div>
+					<div class="technic_wrapper">
+						<h3 class="technic_title">СССР</h3>
+						<div class="technic_pic-holder">
+							<picture>
+								<source type="image/webp" srcset="./img/technic-ussr.webp" />
+								<img
+									class="technic_pic"
+									src="./img/technic-ussr.png"
+									alt="Техника СССР"
+								/>
+							</picture>
+						</div>
+						<div class="technic_info">
+							<span class="technic_count"> 141 </span>
+							<span class="technic_count-subtext">советская машина в игре</span>
+							<span class="technic_text">Т-34, ИС, ИС-7, КВ-1, ИСУ-152</span>
+						</div>
+					</div>
+				</div>
+				<!-- STATIC REGISTRATION BLOCK -->
+				<div class="registration">
+					<h2 class="registration_title">
+						Более 600 боевых машин от крупнейших танко- строительных держав
+					</h2>
+					<p class="registration_subtitle">
+						Каждая модель воссоздана до мельчайших деталей
+					</p>
+					<div class="registration_button-wrapper">
+						<a
+							class="registration_button"
+							href="https://lesta.ru/registration/ru/"
+						>
+							<span class="registration_button-text">Зарегистрироваться</span>
+						</a>
+					</div>
+				</div>
+				<!-- FLAGS NAVIGATION -->
+				<div class="nav_scroll-wrapper">
+					<div class="nav_wrapper">
+						<span class="nav_arrow nav_arrow__prev">
+							<svg
+								width="18"
+								height="13"
+								viewBox="0 0 18 13"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M7.00391 0.125L1.16016 5.96875L0.6875 6.46289L1.16016 6.95703L7.00391 12.8008L7.99219 11.8125L3.33008 7.15039H17.123V5.77539H3.33008L7.99219 1.11328L7.00391 0.125Z"
+									fill="#F9F5E1"
+								/>
+							</svg>
+						</span>
+						<ul class="nav">
+							<li class="nav_item nav_item__active" data-flag="ussr">
+								<div class="nav_icon nav_icon__ussr"></div>
+								<span class="nav_name">ссср</span>
+							</li>
+							<li class="nav_item" data-flag="germany">
+								<div class="nav_icon nav_icon__germany"></div>
+								<span class="nav_name">германия</span>
+							</li>
+							<li class="nav_item" data-flag="usa">
+								<div class="nav_icon nav_icon__usa"></div>
+								<span class="nav_name">сша</span>
+							</li>
+							<li class="nav_item" data-flag="france">
+								<div class="nav_icon nav_icon__france"></div>
+								<span class="nav_name">франция</span>
+							</li>
+							<li class="nav_item" data-flag="uk">
+								<div class="nav_icon nav_icon__uk"></div>
+								<span class="nav_name">великобритания</span>
+							</li>
+							<li class="nav_item" data-flag="czech">
+								<div class="nav_icon nav_icon__czech"></div>
+								<span class="nav_name">чехословакия</span>
+							</li>
+						</ul>
+						<span class="nav_arrow nav_arrow__next">
+							<svg
+								width="18"
+								height="13"
+								viewBox="0 0 18 13"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M10.8066 12.8008L16.6504 6.95703L17.123 6.46289L16.6504 5.96875L10.8066 0.124999L9.81836 1.11328L14.4805 5.77539L0.687501 5.77539L0.6875 7.15039L14.4805 7.15039L9.81836 11.8125L10.8066 12.8008Z"
+									fill="#F9F5E1"
+								/>
+							</svg>
+						</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<script src="sliderControl.js"></script>
+	</body>
+</html>
